@@ -2,7 +2,7 @@
 
 if (Singleton.find().count() === 0) {
   Singleton.insert({
-    minimumThreshold: 250,
+    minimumThreshold: 50,
     threshold_updated_at: new Date().getTime()
   });
 }
@@ -36,7 +36,7 @@ if (Posts.find().count() === 0 && process.env.NODE_ENV != "production" ) {
     title: "Build more affordable, on-campus housing.",
     description: "As there is only enough housing for half the student population, it creates a challenge to find affordably priced off-campus housing.",
     upvoters: [pete._id],
-    votes: 50,
+    votes: 300,
     minimumVotes: Singleton.findOne().minimumThreshold
   });
 
