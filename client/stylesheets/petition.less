@@ -110,7 +110,7 @@
 .petition-sign-count {
   font-size: 18px;
 }
-  //comment
+
 .petition-social-wrapper {
   margin-bottom: 50px;
 }
@@ -257,9 +257,8 @@
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 50px solid rgb(0, 0, 0);
-  border-left: 50px solid rgb(0, 0, 0);
-  clip-path: circle(50px);
+  border-top: 50px solid lighten(@gray, 10%);
+  border-left: 50px solid transparent;
   right: 15px;
   top: 15px;
 }
@@ -287,8 +286,8 @@
   position: absolute;
   width: 0;
   height: 0;
-  border-top: $checkmarkFat solid $checkmarkColor;
-  border-left: $checkmarkFat solid $checkmarkColor;
+  border-top: 50px solid @brand-primary;
+  border-left: 50px solid transparent;
   right: 15px;
   top: 15px;
 }

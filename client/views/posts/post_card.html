@@ -8,11 +8,11 @@
         </a>
       </h3>
       <p>
-        {{#each post.tag_ids}} {{#with tag this}}
-        <a href="/petitions/tagged/{{this.name}}"
-          ><span class="label label-primary">{{upcase this.name}}</span></a
-        >
-        {{/with}} {{/each}}
+        {{#each post.tag_ids}}
+          {{#with tag this}}
+            <a href="/petitions/tagged/{{this.name}}"><span class="label label-primary">{{upcase this.name}}</span></a>
+          {{/with}}
+        {{/each}}
       </p>
     </div>
   </div>
