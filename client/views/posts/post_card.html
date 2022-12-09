@@ -3,16 +3,16 @@
     <div class="square-content waiting-for-reply">
       <h4 class="petition-sign-count">{{pluralize post.votes "Signature"}}</h4>
       <h3 class="petition-title">
-        <a href="{{pathFor 'postPage' _id=post._id }}">
-          {{post.title}}
-        </a>
+        {{#if !post.status}} {{post.status}} {{/if}}
+        
+        <a href="{{pathFor 'postPage' _id=post._id }}"> {{post.title}} </a>
       </h3>
       <p>
-        {{#each post.tag_ids}}
-          {{#with tag this}}
-            <a href="/petitions/tagged/{{this.name}}"><span class="label label-primary">{{upcase this.name}}</span></a>
-          {{/with}}
-        {{/each}}
+        {{#each post.tag_ids}} {{#with tag this}}
+        <a href="/petitions/tagged/{{this.name}}"
+          ><span class="label label-primary">{{upcase this.name}}</span></a
+        >
+        {{/with}} {{/each}}
       </p>
     </div>
   </div>
