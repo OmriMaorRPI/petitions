@@ -3,7 +3,7 @@
     <div class="square-content waiting-for-reply">
       <h4 class="petition-sign-count">{{pluralize post.votes "Signature"}}</h4>
       <h3 class="petition-title">
-        {{#if !post.status}} {{post.status}} {{/if}}
+        <!-- {{#if !post.status}} {{post.status}} {{/if}} -->
         
         <a href="{{pathFor 'postPage' _id=post._id }}"> {{post.title}} </a>
       </h3>
